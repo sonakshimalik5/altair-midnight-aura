@@ -188,6 +188,21 @@
   transform: none;
 }
 
+@keyframes intro-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility intro {
+  animation: intro-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @keyframes drift {
   0%,
   100% {
@@ -213,5 +228,8 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .intro {
+    animation: none;
   }
 }
