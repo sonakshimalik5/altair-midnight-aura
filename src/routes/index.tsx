@@ -8,23 +8,46 @@ import notesImg from "@/assets/altair-notes.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ALTAIR · Sarkar — Nocturnal Floral-Woody Parfum, ₹1,199" },
+      { title: "ALTAIR by Sarkar — Nocturnal Floral-Woody Parfum, ₹1,199" },
       {
         name: "description",
         content:
-          "ALTAIR by Sarkar: night jasmine, datura, cherry, mulberry and wood. For nights that smell like rain and feel like confidence. 100 ML Parfum, ₹1,199.",
+          "ALTAIR by Sarkar: night jasmine, datura, cherry, mulberry and wood. A nocturnal floral-woody parfum. 100 ML, ₹1,199.",
       },
-      { property: "og:title", content: "ALTAIR · Sarkar Parfum" },
+      { property: "og:title", content: "ALTAIR by Sarkar — Nocturnal Parfum" },
       {
         property: "og:description",
         content: "For nights that smell like rain and feel like confidence. A nocturnal floral-woody parfum.",
       },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: "product" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "ALTAIR",
+          brand: { "@type": "Brand", name: "Sarkar" },
+          category: "Parfum",
+          description:
+            "A nocturnal floral-woody parfum with night jasmine, datura, cherry, mulberry and wood. 100 ML.",
+          offers: {
+            "@type": "Offer",
+            price: "1199",
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+          },
+        }),
+      },
     ],
   }),
   component: Altair,
 });
+
 
 const NOTES = [
   {
