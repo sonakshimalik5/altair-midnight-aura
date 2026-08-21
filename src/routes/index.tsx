@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import heroImg from "@/assets/altair-hero.jpg";
-import productImg from "@/assets/altair-product.jpg";
-import campaignImg from "@/assets/altair-campaign.jpg";
-import notesImg from "@/assets/altair-notes.jpg";
+import heroImg from "@/assets/altair-hero.webp";
+import productImg from "@/assets/altair-product.webp";
+import campaignImg from "@/assets/altair-campaign.webp";
+import notesImg from "@/assets/altair-notes.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
