@@ -155,42 +155,42 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-transparent to-background/60" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-6 pb-20 pt-32 lg:px-10 lg:pb-28">
-        <Reveal>
-          <p className="eyebrow">Sarkar · New Release</p>
-        </Reveal>
-        <Reveal delay={120}>
-          <h1 className="mt-6 font-display text-[19vw] leading-[0.85] tracking-[0.06em] text-metal sm:text-[13vw] lg:text-[10.5vw]">
-            ALTAIR
-          </h1>
-        </Reveal>
+        <p className="intro eyebrow">Sarkar · New Release</p>
+        <h1
+          className="intro mt-6 font-display text-[19vw] leading-[0.85] tracking-[0.06em] text-metal sm:text-[13vw] lg:text-[10.5vw]"
+          style={{ animationDelay: "120ms" }}
+        >
+          ALTAIR
+        </h1>
         <div className="mt-8 max-w-xl">
-          <Reveal delay={240}>
-            <p className="font-display text-2xl font-light italic leading-snug text-foreground/90 sm:text-3xl">
-              For nights that smell like rain and feel like confidence.
-            </p>
-          </Reveal>
-          <Reveal delay={340}>
-            <p className="mt-5 text-sm tracking-[0.18em] text-muted-foreground uppercase">
-              A nocturnal floral-woody parfum
-            </p>
-          </Reveal>
-          <Reveal delay={440}>
-            <div className="mt-10 flex items-center gap-6">
-              <a
-                href="#fragrance"
-                className="group relative inline-flex items-center gap-4 border border-accent/60 px-8 py-4 text-[0.7rem] uppercase tracking-[0.35em] text-foreground transition-colors duration-500 hover:bg-accent hover:text-accent-foreground"
-              >
-                Discover Altair
-                <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </Reveal>
-        </div>
-        <Reveal delay={560}>
-          <p className="mt-16 text-[0.65rem] uppercase tracking-[0.4em] text-muted-foreground">
-            Floral · Fruity · Woody · Night
+          <p
+            className="intro font-display text-2xl font-light italic leading-snug text-foreground/90 sm:text-3xl"
+            style={{ animationDelay: "240ms" }}
+          >
+            For nights that smell like rain and feel like confidence.
           </p>
-        </Reveal>
+          <p
+            className="intro mt-5 text-sm tracking-[0.18em] text-muted-foreground uppercase"
+            style={{ animationDelay: "340ms" }}
+          >
+            A nocturnal floral-woody parfum
+          </p>
+          <div className="intro mt-10 flex items-center gap-6" style={{ animationDelay: "440ms" }}>
+            <a
+              href="#fragrance"
+              className="group relative inline-flex items-center gap-4 border border-accent/60 px-8 py-4 text-[0.7rem] uppercase tracking-[0.35em] text-foreground transition-colors duration-500 hover:bg-accent hover:text-accent-foreground"
+            >
+              Discover Altair
+              <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+        <p
+          className="intro mt-16 text-[0.65rem] uppercase tracking-[0.4em] text-muted-foreground"
+          style={{ animationDelay: "560ms" }}
+        >
+          Floral · Fruity · Woody · Night
+        </p>
       </div>
     </section>
   );
