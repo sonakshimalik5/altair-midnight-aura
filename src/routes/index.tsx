@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import heroImg from "@/assets/altair-hero.jpg";
-import productImg from "@/assets/altair-product.jpg";
-import campaignImg from "@/assets/altair-campaign.jpg";
-import notesImg from "@/assets/altair-notes.jpg";
+import heroImg from "@/assets/altair-hero.webp";
+import productImg from "@/assets/altair-product.webp";
+import campaignImg from "@/assets/altair-campaign.webp";
+import notesImg from "@/assets/altair-notes.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,7 +23,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroImg, type: "image/webp", fetchPriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -143,6 +146,9 @@ function Hero() {
         alt="ALTAIR parfum bottle on wet stone with night jasmine and mulberries"
         width={1280}
         height={1600}
+        loading="eager"
+        decoding="sync"
+        fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/35 to-background" />
