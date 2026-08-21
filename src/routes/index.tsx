@@ -146,6 +146,9 @@ function Hero() {
         alt="ALTAIR parfum bottle on wet stone with night jasmine and mulberries"
         width={1280}
         height={1600}
+        loading="eager"
+        decoding="sync"
+        fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/35 to-background" />
